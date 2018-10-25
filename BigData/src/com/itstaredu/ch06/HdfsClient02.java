@@ -21,7 +21,7 @@ public class HdfsClient02 {
 	@Before
 	public  void before() {
 		Configuration configuration = new Configuration();
-		 configuration.set("fs.defaultFS", "hdfs://192.168.243.129:9000");
+//		 configuration.set("fs.defaultFS", "hdfs://192.168.243.129:9000");
 		 configuration.set("fs.replication", "2");
 		 configuration.set("fs.blocksize", "64m");
 		// configuration.set("fs.hdfs.impl",

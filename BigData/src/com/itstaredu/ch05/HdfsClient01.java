@@ -22,9 +22,9 @@ public class HdfsClient01 {
 //			fSystem.mkdirs(new Path("/testfolder2"));
 		
 		
-//			fSystem.copyFromLocalFile(new Path("E:/Personal/BigData/data-source/test/words.txt"), new Path("/words.txt"));
+			fSystem.copyFromLocalFile(new Path("E:/Personal/BigData/data-source/test/words.txt"), new Path("/words.txt"));
 //			第一个false参数表示不删除源文件，第4个true参数表示使用本地原文件系统
-			fSystem.copyToLocalFile(false,new Path("/a.txt"), new Path("E:/Personal/BigData/data-source/test01/aa.txt"),true);
+//			fSystem.copyToLocalFile(false,new Path("/a.txt"), new Path("E:/Personal/BigData/data-source/test01/aa.txt"),true);
 			FileStatus[] listStatus = fSystem.listStatus(new Path("/"));
 			for (FileStatus fileStatus : listStatus) {
 				System.out.println(fileStatus);
