@@ -18,7 +18,7 @@ public class HdfsClient01 {
 		// "org.apache.hadoop.hdfs.DistributedFileSystem");
 		try {
 			//user root 或者sam 都行
-			FileSystem fSystem = FileSystem.get(new URI( "hdfs://192.168.243.129:9000"),configuration,"sam");
+			FileSystem fSystem = FileSystem.get(new URI( "hdfs://192.168.243.129:9000"),configuration,"root");
 //			fSystem.mkdirs(new Path("/testfolder2"));
 		
 		

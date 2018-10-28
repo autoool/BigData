@@ -33,7 +33,7 @@ public class HdfsClient02 {
 		
 //			fSystem.copyFromLocalFile(new Path("E:/Personal/BigData/data-source/test/words.txt"), new Path("/words.txt"));
 //			第一个false参数表示不删除源文件，第4个true参数表示使用本地原文件系统
-			fsystem.copyToLocalFile(false,new Path("/a.txt"), new Path("E:/Personal/BigData/data-source/test01/aa.txt"),true);
+//			fsystem.copyToLocalFile(false,new Path("/a.txt"), new Path("E:/Personal/BigData/data-source/test01/aa.txt"),true);
 		
 			System.out.println("end");
 		} catch (Exception e) {
