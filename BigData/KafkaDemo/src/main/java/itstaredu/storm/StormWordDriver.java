@@ -13,7 +13,7 @@ import org.apache.storm.tuple.Fields;
 public class StormWordDriver {
 
     public static void main(String[] args) {
-        //创建拓扑
+        //创建拓扑`
         TopologyBuilder topologyBuilder = new TopologyBuilder();
         //指定设置
         topologyBuilder.setSpout("DataSourceSpout", new DataSourceSpout(), 1);

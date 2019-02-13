@@ -33,7 +33,7 @@ public class Lesson3_2 {
      * @param n              待求的数，
      * @param deltaThreshold 误差阀值
      * @param maxTry         二分查找的最大次数
-     * @return 平方根的解
+     * @return 平方根的解   64
      */
     public static double getSqureRoot(int n, double deltaThreshold, int maxTry) {
         if (n <= 1) {
@@ -41,8 +41,17 @@ public class Lesson3_2 {
         }
         double min = 1.0, max = (double) n;
         for (int i = 0; i < maxTry; i++) {
-            double middle = (max + min) / 2;
+            //优化代码
+//            double middle = (max + min) / 2;
+            double middle = min + (max - min) / 2;//优化和避免溢出
             double square = middle * middle;
+            //
+            /**
+             *误差百分比和绝对误差 误差值，占输入n的比例
+             * 如果n是一个很小的正整数，误差需要精确到0.00001，
+             * 如果n是一个很大的数值，精确到0.00001 没有必要，保证
+             * 迭代次数基本一致，精确到0.1 即可。
+             */
             double delta = Math.abs((square / n) - 1);
             if (delta <= deltaThreshold) {
                 return middle;
