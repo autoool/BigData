@@ -1,11 +1,7 @@
-package itstaredu.kafka;
+package com.itstaredu.kafka;
 
-
-import org.apache.kafka.clients.producer.Producer;
-import org.apache.kafka.clients.producer.ProducerConfig;
 
 import java.util.Properties;
-import java.util.UUID;
 
 /**
  * @author sam

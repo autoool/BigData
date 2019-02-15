@@ -1,4 +1,4 @@
-package itstaredu.storm;
+package com.itstaredu.storm;
 
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;

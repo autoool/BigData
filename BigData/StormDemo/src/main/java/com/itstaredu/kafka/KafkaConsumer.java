@@ -1,4 +1,4 @@
-//package itstaredu.kafka;
+//package com.itstaredu.kafka;
 //
 //import kafka.consumer.*;
 //import kafka.javaapi.consumer.ConsumerConnector;
