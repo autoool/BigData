@@ -9,7 +9,7 @@ object HelloWorld {
 
     var conf:SparkConf=null
     try {
-      conf= new SparkConf().setAppName("sam").setMaster("local[2]")
+      conf= new SparkConf().setAppName("HelloWorld").setMaster("local[2]")
     }catch{
       case e: Exception => println(e)
     }
