@@ -89,6 +89,7 @@ public class ProductLog {
         //随机通话时间
         String buildTime = randomBuildTime(startTime, endTime);
         DecimalFormat df = new DecimalFormat("0000");
+        //打电话时间小于1800s
         String duration = df.format((int) (30 * 60 * Math.random()));
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(caller + ",").append(callee + ",").append(buildTime + ",").append(duration);
@@ -140,7 +141,7 @@ public class ProductLog {
 
     public static void main(String[] args) {
 
-        args = new String[]{"E:\\Personal\\BigData\\data-source\\caller.log"};
+//        args = new String[]{"E:\\Personal\\BigData\\data-source\\caller.log"};
 
         if (args == null || args.length < 0) {
             System.out.println("没有路径");
