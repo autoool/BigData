@@ -114,5 +114,49 @@ public class HbaseUtil {
         return result;
     }
 
+    /**
+     * 生成分区键 param1_param2_
+     *
+     * @param regionCode
+     * @param caller
+     * @param buildTime
+     * @param callee
+     * @param flag
+     * @param duration   通话持续时间
+     * @return
+     */
+    public static String getRowKey(String regionCode, String caller, String buildTime, String callee, String flag, String duration) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(regionCode + "_")
+                .append(caller + "_")
+                .append(buildTime + "_")
+                .append(callee + "_")
+                .append(flag + "_")
+                .append(duration + "_");
+        return sb.toString();
+    }
+
+    /**
+     * 生成分区号
+     *
+     * @param caller
+     * @param buildTime
+     * @param regions
+     * @return
+     */
+    public static String getRegionCode(String caller, String buildTime, int regions) {
+        int len = caller.length();
+        String lastPhone = caller.substring(len - 4);
+        String ym = buildTime.replaceAll("-", "")
+                .replaceAll(":", "")
+                .replaceAll(" ", "")
+                .substring(0, 6);
+        Integer x = Integer.valueOf(lastPhone) ^ Integer.valueOf(ym);
+        int y = x.hashCode();
+        int regionCode = y % regions;
+        DecimalFormat df = new DecimalFormat("00");
+        return df.format(regionCode);
+    }
+
 
 }
